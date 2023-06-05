@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: rgba(85, 51, 87, 0.635);
+}
+@mixin main{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+@mixin main2{
+    display: flex;
+    flex-direction: column;
+}
+
+.me{
+    color: rgb(12, 11, 123); 
+    font-size: 50px;
+    @include main; 
+}
+.main-body{
+    // min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: white;
+    .card{
+        background-color: white;
+        width: 600px;
+        border-radius: 1rem 1rem 10rem 1rem;
+        box-shadow: 1rem 1rem pink;
+    }
+}
+
+.container 
+button{
+    color: aliceblue;  
+    background-color: rgb(224, 59, 222);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%; 
+}   
+}
+.container{
+    padding: 2rem;
+   @include main2;
+    
+    form{
+       @include main2;
+       
+        .base{
+            display: flex;
+            gap: 2rem;
+
+        }
+        .block{
+            @include main2;
+            input{
+                width: 100px;
+                padding: .5rem;
+                border-radius: .5rem;
+                border: 1px solid grey;
+                display: flex;
+                align-items: center;
+                font-size: 800;        
+            }
+            input::placeholder{
+                font-size: 500;
+            }   
+        }
+       
+    }
+    
+}
+
+
+.age-foot h1 {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+    height: fit-content;
+    span{
+        color: rgb(224, 59, 222);
+    }
+}
+.submit-block{
+    display: flex;
+    align-items: center;
+    hr{
+        width: 100%;
+    }
+    .hr2{
+        width: 0;
+    }
+    
+}
+.block .red{
+    color: red;
+}
+@media (max-width: 600px) {
+    .main-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    
+    .card {
+      width: 92%;
+    }
+}
+ .container form {
+       @include main2;
+        .base{
+            display: flex;
+            gap: 0.1rem;
+        }
+         .block {
+            @include main2;
+  
+          input {
+            display: flex;
+              width:50% ;
+            }
+          }
+}
+    .submit-block{
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        hr{
+            width: 45%;
+        }
+        .hr2{
+            width: 45%;
+        }
+  }
+  .age-foot h1{
+    font-size: 4rem;
+  }
+  } 
+  
